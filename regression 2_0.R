@@ -14,8 +14,8 @@ suppressWarnings({
   library(sandwich)
 })
 
-#data <- read_excel("admissionsED.xlsx")
-data <- read_excel("attendancesED.xlsx")
+data <- read_excel("admissionsED.xlsx")
+#data <- read_excel("attendancesED.xlsx")
 
 # Transform the data of total admissions to fit the Poisson model condition
 data <- data %>%
@@ -78,12 +78,6 @@ final_results <- function(model) {
 }
 
 
-model_rr_results2 <- list()
-for (place in names(model_results2)) {
-  model_rr_results2[[place]] <- final_results(model_results2[[place]])
-}
-
-
 model_rr_results3 <- list()
 for (place in names(model_results3)) {
   model_rr_results3[[place]] <- list()  
@@ -92,7 +86,6 @@ for (place in names(model_results3)) {
   }
 }
 
-model_rr_results2
 model_rr_results3
 
 # plot
