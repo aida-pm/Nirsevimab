@@ -14,8 +14,8 @@ suppressWarnings({
   library(sandwich)
 })
 
-data <- read_excel("admissionsED.xlsx")
-#data <- read_excel("attendancesED.xlsx")
+#data <- read_excel("admissionsED.xlsx")
+data <- read_excel("attendancesED.xlsx")
 
 # Transform the data of total admissions to fit the Poisson model condition
 data <- data %>%
